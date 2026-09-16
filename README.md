@@ -1,32 +1,85 @@
-# React + TypeScript + Vite
+# IKRAM — Creative Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive personal portfolio for Ikram, focused on creative development, frontend engineering, 3D web, AI, games, and experimental systems.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The site presents Ikram's work as a cinematic, editorial experience rather than a conventional portfolio. DOM content carries information while a procedural Three.js Core supplies atmosphere, depth, and motion.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Interactive procedural Three.js Core with React Three Fiber
+- Lenis smooth scrolling with reduced-motion support
+- Responsive hero, work, playground, toolkit, process, journey, philosophy, and contact sections
+- Case-study routes for ForceCore, Nexus Sky, and ForceCore AI
+- Core Terminal easter egg with project and navigation commands
+- Index overlay for fast recruiter-friendly navigation
+- `?lite=1` low-power mode
+- WebGL error fallback that preserves the DOM experience
+- Responsive mobile navigation and desktop custom cursor
+- Accessible labels, semantic headings, and keyboard interactions
 
-## Expanding the Oxlint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- React
+- TypeScript
+- Vite
+- Three.js
+- `@react-three/fiber`
+- `@react-three/drei`
+- Lenis
+- Framer Motion
+- Lucide React
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Development
+
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Production Build
+
+```bash
+npm run build
+npm run preview
+```
+
+The production output is written to `dist`.
+
+## Cloudflare Deployment
+
+This is a normal Vite static SPA. Connect the GitHub repository to Cloudflare Pages with:
+
+- Framework preset: `Vite`
+- Build command: `npm run build`
+- Build output directory: `dist`
+
+Cloudflare Pages provides the SPA fallback for direct navigation to the client-side case-study paths. No Workers or server-side runtime are required. Deployment is performed manually by connecting the GitHub repository.
+
+## Project Structure
+
+```text
+src/
+  App.tsx       Main route-aware application and portfolio sections
+  index.css     Global visual system and responsive styling
+  main.tsx      React entry point
+public/
+  favicon.svg
+  icons.svg
+```
+
+## Projects Featured
+
+- ForceCore
+- Nexus Sky
+- ForceCore AI
+
+## Environment Variables
+
+No environment variables are required for the current static portfolio.
+
+## Author
+
+Ikram  
+GitHub: https://github.com/NexusMC202
